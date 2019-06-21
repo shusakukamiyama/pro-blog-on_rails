@@ -2,6 +2,14 @@
 
 <h1>Articles</h1>
 
+<%= search_form_for @search do |f| %>
+  <div class="form-group">
+    <%= f.label :body_cont, "Name" %>
+    <%= f.text_field :body_cont, class: "form-control" %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
 <table>
   <thead>
     <tr>
