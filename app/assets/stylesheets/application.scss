@@ -12,6 +12,27 @@
  *
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ html {
+     font-family: -apple-system, BlinkMacSystemFont, Roboto, "游ゴシック体", YuGothic, "Yu Gothic Medium", sans-serif;
+     font-feature-settings: "pkna" 1;
+ }
+ 
+ body {
+     @extend html;
+ }
+ 
+ h1, h2, h3, h4, h5, h6, strong {
+     @extend html;
+     font-family: -apple-system, BlinkMacSystemFont, Roboto, "游ゴシック体", YuGothic, "Yu Gothic", sans-serif;
+     font-weight: 700;
+ }
+ ::placeholder {
+     font-size:0.8rem;
+ }
  @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
@@ -55,6 +76,7 @@ a[data-toggle="collapse"] {
 #sidebar {
     height: 100vh;
     position: fixed;
+    border:solid 1px #eaeaea;
 }
 #sidebar.active {
     margin-left: -250px;
@@ -225,4 +247,14 @@ p.tag a{
     box-shadow:0 0 8px #eaeaea;
     background: #fff;
     padding:1.5rem;
+}
+.search-bar .form-control {
+    border-radius:1.5rem;
+    background: #eaeaea;
+    transition: background-color 0.5s;
+    border:none;
+}
+.search-bar .form-control:hover {
+    border-radius:1.5rem;
+    background: #e3f9ffa8;
 }
