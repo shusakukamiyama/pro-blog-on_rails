@@ -186,3 +186,43 @@ p.tag a{
     text-decoration: none;
     color: #2b2b2b;
 }
+.show-article {
+    background: #eaeaea;
+    padding-top:16px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+.show-article::before {
+    background: inherit;
+    content: '';
+    filter: blur(10px);
+    margin: -10px;  /* blurの値と同じ値だけマイナス */
+    width: calc(100% + 20px); 
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    z-index: -1;
+}
+.thumb-img {
+    width:75%;
+    margin:0 auto;
+    border-radius: 1rem;
+    text-align: center;
+    display: block;
+}
+.article-box {
+    margin-top:16px;
+    width:75%;
+    border-radius:1rem;
+    box-shadow:0 0 8px #eaeaea;
+    background: #fff;
+    padding:1.5rem;
+}

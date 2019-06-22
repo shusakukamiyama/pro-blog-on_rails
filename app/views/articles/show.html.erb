@@ -1,19 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
-
-<p>
-<strong>Picture:</strong>
-<%= image_tag(@article.picture_url) if @article.picture.present? %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<div class="col-md-10 offset-md-2 show-article" style="background-image: url(<%= @article.picture_url if @article.picture.present? %>)" >
+  <div class="container-fluid" >
+    <%= image_tag(@article.picture_url, class:"thumb-img") if @article.picture.present? %>
+    <div class="container-fluid article-box">
+      <h2><%= @article.title %></h2>
+      <p><%= @article.body %></p>
+    </div>
+  </div>
+</div>
