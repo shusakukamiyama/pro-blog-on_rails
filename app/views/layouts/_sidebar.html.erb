@@ -1,0 +1,22 @@
+<nav id="sidebar" class="col-md-2">
+    <div class="sidebar-header">
+        <%=link_to(root_path, class:'logo-anker') do %>
+            <h3>StartX</h3>
+        <% end %>
+    </div>
+    <ul class="list-unstyled components">
+        <p>Dummy Heading</p>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <%=link_to("記事一覧", articles_path)%>
+        </li>
+        <li>
+            <a href="#">Portfolio</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</nav>

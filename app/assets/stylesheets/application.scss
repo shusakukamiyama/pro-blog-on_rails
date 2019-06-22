@@ -1,0 +1,188 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+ @media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+#carouselExampleSlidesOnly {
+    .carousel-inner {
+        height: 40vh;
+    }
+}
+ @import "bootstrap"; 
+ .wrapper {
+    display: flex;
+    align-items: stretch;
+    background-color: #eaeaea;
+}
+#sidebar {
+    height: 100vh;
+    position: fixed;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+ #sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #fff;  /* fallback for old browsers */
+    color: #2b2b2b;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+#sidebar .sidebar-header {
+    padding: 20px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+    color: #2b2b2b;
+}
+
+#sidebar ul p {
+    color: #2b2b2b;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #2b2b2b;
+}
+#sidebar ul li a:hover {
+    color: #2b2b2b;
+    background: #eaeaea;
+    text-decoration: none;
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+footer {
+    padding:16px;
+    background-color: #2b2b2b;
+    color:#fff;
+    ul {
+        margin-bottom: 0px;
+        list-style: none;
+        text-align: center;
+        padding-left:0;
+        li {
+            display: inline-block;
+            padding:16px;
+        }
+    }
+    text-align: center;
+}
+.footer-part {
+    padding-left:0;
+    padding-right:0;
+}
+.big-board {
+    padding-right:0;
+}
+.main-articles {
+    background-color: #fff;
+    box-shadow: 0 0 4px rgb(194, 194, 194);
+    border-radius:0.5rem;
+    padding-top:15px;
+    padding-bottom:15px;
+    height:100%; 
+}
+.card {
+    border: none;
+    border-radius:1rem; 
+    a:hover {
+        text-decoration: none;
+    }
+    padding:15px;
+}
+.card:hover {
+    background: #eaeaea;
+}
+.card-img-top img{
+    border-radius:1rem; 
+    width: 100%;
+}
+.card-title {
+    color:#2b2b2b;
+}
+.card-body {
+    padding-left:0;
+    padding-right:0;
+    padding-top:16px;
+    padding-bottom:0;
+}
+p.tag a{
+    color:gray;
+}
+.main-contents {
+    padding-top:16px;
+    padding-left:0;
+    padding-right:0;
+}
+.right-side-bar {
+    background: #fff;
+    box-shadow: 0 0 4px rgb(194, 194, 194);
+    border-radius:0.5rem;
+    padding-top:15px;
+    padding-bottom:15px;
+    height:100%; 
+}
+.large-board {
+    margin-top:16px;
+    margin-bottom:16px;
+}
+.slider {
+    padding-left:0;
+    padding-right:0;
+}
+.logo-anker {
+    color: #2b2b2b;
+}
+.logo-anker:hover {
+    text-decoration: none;
+    color: #2b2b2b;
+}
