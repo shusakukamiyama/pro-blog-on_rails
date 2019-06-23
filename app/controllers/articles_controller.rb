@@ -5,14 +5,16 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @search = Article.search(params[:q])
-    @articles = @search.result.order(created_at: :desc).limit(12)
+    @articles = @search.result.order(created_at: :desc).limit(12).page(params[:page])
 
     if params[:tag_name]
-      @articles = @articles.tagged_with("#{params[:tag_name]}")
+      @articles = @articles.tagged_with("#{params[:tag_name]}").page(params[:page])
     end
 
     @most_viewed = Article.order('impressions_count DESC').take(5)
-
+    @firstarticle = Article.find(1)
+    @secondarticle = Article.find(2)
+    @thirdarticle = Article.find(3)
   end
 
   # GET /articles/1
