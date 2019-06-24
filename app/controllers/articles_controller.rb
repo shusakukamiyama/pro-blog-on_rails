@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_search
 
   # GET /articles
   # GET /articles.json
   def index
-    @search = Article.search(params[:q])
     @articles = @search.result.order(created_at: :desc).limit(12).page(params[:page])
 
     if params[:tag_name]
@@ -20,16 +20,18 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @search = Article.search(params[:q])
+
   end
 
   # GET /articles/new
   def new
     @article = Article.new
+
   end
 
   # GET /articles/1/edit
   def edit
+   
   end
 
   # POST /articles
@@ -70,6 +72,10 @@ class ArticlesController < ApplicationController
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def set_search
+    @search = Article.search(params[:q])
   end
 
   private

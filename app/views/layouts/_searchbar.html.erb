@@ -1,11 +1,9 @@
- <div class="col-md-10 offset-md-2 main-contents">
-    <div class="container-fluid">
-        <div class="search-bar">
-        <%= search_form_for @search do |f| %>
-            <div class="form-group">
-            <%= f.text_field :body_cont, class: "form-control fa", placeholder: "\uf002" + "記事タイトル、タグ" %>
-            </div>
-        <% end %>
+<div class="container-fluid">
+    <div class="search-bar">
+    <%= search_form_for @search do |f| %>
+        <div class="form-group">
+        <%= f.text_field :body_cont, class: "form-control fa", placeholder: "\uf002" + "記事タイトル、タグ" %>
         </div>
+    <% end %>
     </div>
-  </div>
+</div>

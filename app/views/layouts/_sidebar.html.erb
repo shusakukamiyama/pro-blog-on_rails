@@ -1,22 +1,39 @@
 <nav id="sidebar" class="col-md-2">
-    <div class="sidebar-header">
-        <%=link_to(root_path, class:'logo-anker') do %>
-            <h3>StartX</h3>
-        <% end %>
+    <div class="sidebar-contents">
+        <div class="sidebar-header">
+            <%=link_to(root_path, class:'logo-anker') do %>
+                <h3>StartX</h3>
+            <% end %>
+        </div>
+        <ul class="list-unstyled components">
+            <% if user_signed_in? %>
+                <p>メールアドレス： <%= current_user.email %> </p>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <% else %>
+                <p><%= link_to "新規登録", new_user_registration_path %></p>
+                <%= link_to "ログイン", new_user_session_path %>
+            <% end %>
+            <li>
+                <%=link_to("記事一覧", articles_path)%>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+        </ul>
+        <div class="sidebar-bottom">
+            <div class="row">
+                <div class="col-md-6">
+                <a href="#">About</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <hr>
+            <div class=sidebar-logo>
+                <p>Powered by</p>
+                <p>StartX</p>
+            </div>
+        </div>
     </div>
-    <ul class="list-unstyled components">
-        <p>Dummy Heading</p>
-        <li>
-            <a href="#">About</a>
-        </li>
-        <li>
-            <%=link_to("記事一覧", articles_path)%>
-        </li>
-        <li>
-            <a href="#">Portfolio</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
-        </li>
-    </ul>
 </nav>

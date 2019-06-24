@@ -1,8 +1,6 @@
 <div class="wrapper">
-<p id="notice"><%= notice %></p>
-
 <div class="col-md-10 offset-md-2 main-contents">
-
+  <%=render partial:"layouts/searchbar" %>
   <div class="container-fluid slider">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -101,8 +99,8 @@
                   <div class="card-body">
                     <h5 class="card-title"><%= rank.title %></h5>
                     <p class="tag"><%= render 'articles/tag_list', tag_list: rank.tag_list%></p>
-                    <!-- <%= link_to 'Edit', edit_article_path(rank), class:"btn btn-primary" %> -->
-                    <!-- <%= link_to 'Destroy', rank, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-primary"%> -->
+                    <%= link_to 'Edit', edit_article_path(rank), class:"btn btn-primary" %> -->
+                    <%= link_to 'Destroy', rank, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-primary"%> -->
                   </div>
                 </div>
               <% end %>

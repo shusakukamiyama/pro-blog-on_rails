@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%=render partial:"layouts/searchbar" %>
 <div class="col-md-10 offset-md-2 show-article" style="background-image: url(<%= @article.picture_url if @article.picture.present? %>)" >
   <div class="container-fluid" >
     <%= image_tag(@article.picture_url, class:"thumb-img") if @article.picture.present? %>

@@ -26,6 +26,7 @@ gem 'impressionist'
 gem 'font-awesome-sass'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem 'devise'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
