@@ -8,11 +8,10 @@
           <%=link_to(@firstarticle) do %>
             <div class="container col-md-8 main-content"> 
               <div class="row">
-                <div class="col-md-4">
-                  <h1><%= @firstarticle.title %></h1>
-                  <p><%= @firstarticle.body %></p>
+                <div class="col-md-8">
+                  <h1 class="slide-title"><%= @firstarticle.title %></h1>
                 </div>
-                <div class="col-md-4 offset-md-4">
+                <div class="col-md-4">
                   <%= image_tag(@firstarticle.picture_url, class:"d-block w-100") if @firstarticle.picture.present? %>
                 </div>
               </div>
@@ -23,11 +22,10 @@
            <%=link_to(@secondarticle) do %>
             <div class="container col-md-8 main-content"> 
               <div class="row">
-                <div class="col-md-4">
-                  <h1><%= @secondarticle.title %></h1>
-                  <p><%= @secondarticle.body %></p>
+                <div class="col-md-8">
+                  <h1 class="slide-title"><%= @secondarticle.title %></h1>
                 </div>
-                <div class="col-md-4 offset-md-4">
+                <div class="col-md-4">
                   <%= image_tag(@secondarticle.picture_url, class:"d-block w-100") if @secondarticle.picture.present? %>
                 </div>
               </div>
@@ -38,11 +36,10 @@
           <%=link_to(@thirdarticle) do %>
             <div class="container col-md-8 main-content"> 
               <div class="row">
-                <div class="col-md-4">
-                  <h1><%= @thirdarticle.title %></h1>
-                  <p><%= @thirdarticle.body %></p>
+                <div class="col-md-8">
+                  <h1 class="slide-title"><%= @thirdarticle.title %></h1>
                 </div>
-                <div class="col-md-4 offset-md-4">
+                <div class="col-md-4">
                   <%= image_tag(@thirdarticle.picture_url, class:"d-block w-100") if @thirdarticle.picture.present? %>
                 </div>
               </div>
@@ -73,7 +70,8 @@
                     <div class="card-inside">
                       <div class="card-img-top"><%= image_tag article.picture_url(:thumb) if article.picture.present? %></div>
                       <div class="card-body">
-                        <h5 class="card-title"><%= article.title %></h5>
+                        <p class="card-title"><%= article.title.truncate(42) %></p>
+                        <span class="badge badge-secondary category"><%= article.category.name if article.category.present? %></span>
                         <p class="tag">#<%= render 'articles/tag_list', tag_list: article.tag_list%></p>
                         <!-- <%= link_to 'Edit', edit_article_path(article), class:"btn btn-primary" %> -->
                         <!-- <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-primary"%> -->

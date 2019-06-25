@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<div class="container-fluid search-box">
     <div class="search-bar">
     <%= search_form_for @search do |f| %>
         <div class="form-group">
-        <%= f.text_field :body_cont, class: "form-control fa", placeholder: "\uf002" + "記事タイトル、タグ" %>
+        <%= f.text_field :title_or_body_or_category_name_cont, class: "form-control fa", placeholder: "\uf002" + "記事タイトル、タグ" %>
         </div>
     <% end %>
     </div>

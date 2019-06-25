@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.all.map{|o| [o.name, o.id]} %>
+  </div>
+
+  <div class="field">
     <%= form.label :tag_list %>
     <%= form.text_field :tag_list, value: @article.tag_list.join(',') %>
   </div>

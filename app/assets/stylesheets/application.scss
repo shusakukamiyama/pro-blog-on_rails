@@ -92,16 +92,16 @@ a[data-toggle="collapse"] {
         .carousel-item::before {
             content: '';
             background: inherit;
-            -webkit-filter: blur(10px);
-            -moz-filter: blur(10px);
-            -o-filter: blur(10px);
-            -ms-filter: blur(10px);
-            filter: blur(10px);
+            -webkit-filter: blur(12px);
+            -moz-filter: blur(12px);
+            -o-filter: blur(12px);
+            -ms-filter: blur(12px);
+            filter: blur(12px);
             position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
             z-index: -1;
         }
     }
@@ -217,10 +217,13 @@ footer {
     padding-bottom:0;
 }
 p.tag a{
-    color:gray;
+    color:#b3b3b3;
+    font-size:12px;
+}
+.slide-title {
+    font-size:1.6rem;
 }
 .main-contents {
-    padding-top:16px;
     padding-left:0;
     padding-right:0;
 }
@@ -287,6 +290,16 @@ p.tag a{
     background: #fff;
     padding:1.5rem;
 }
+.card-title {
+    font-size:0.8rem;
+    font-weight:bold;
+}
+.search-box {
+    background: #fff;
+    padding-top:16px;
+    padding-bottom:8px;
+    
+}
 .search-bar .form-control {
     border-radius:1.5rem;
     background: #eaeaea;
@@ -336,4 +349,21 @@ a.page-link:hover {
     .sidebar-logo {
         color:#cecece;
     }
+}
+.hero-wrap {
+    overflow: hidden;
+    .hero {
+        background-image: url("20190325_enjoy.jpg");
+        background-position: center center;
+        background-size: cover;
+        filter: blur(5px);
+        height:100vh; 
+        width:100%;
+        top: -5px;
+        left: -5px;
+    }
+}
+.category {
+    background: #b3b3b3;
+    font-size:12px;
 }
